@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ApuestaLoHoy
 
-## Getting Started
-
-First, run the development server:
+Spanish-language, multi-country sports-betting comparison/affiliate site. Work in progress: see `docs/` (start with `02-architecture-and-plan.md`).
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
+npm test           # vitest
+npm run typecheck
+npm run test:e2e   # builds, then Playwright + axe (needs `npx playwright install chromium` once)
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Data: `src/data/commercial*.ts` hold regulator-register operators (CO, ES, PE) with source and date; `src/data/markets.ts` holds per-country status.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Safety model: nothing commercial renders unless `canShowAffiliateLink` / `canServeCampaign` (`src/lib/eligibility.ts`) allow it. Every market ships as `RESEARCH_PENDING`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Status
+Bilingual (English UK / Spanish; `/en`, `/es`). Sister site of apostarhoje.net (same structure and design language, original code and brand). ES, CO and PE show regulator-registered operators with working "Apostar ahora" buttons.
 
-## Learn More
+- **Links**: until affiliate tracking URLs exist, buttons go via `/go/<brand>-<cc>` to the operator's own registered domain (`rel="sponsored"`). Add real tracking links in `src/data/commercial.ts`.
+- **Promotion decision**: ES/CO/PE are set to `APPROVED_FOR_AFFILIATE_PROMOTION` on the owner's instruction (2026-10-21). Advertising laws for these markets were **not** read in full; see docs/05 and docs/06 before scaling.
+- **No invented data**: no bonuses, ratings or logos. Review pages state what is verified (licence) and mark the rest pending.
+- **Not built**: admin, database, click logging, newsletter, contact page, banners.
 
-To learn more about Next.js, take a look at the following resources:
+## Agents and QA
+Five agents (QA, content and editor, SEO and GEO, news, brand and design) keep the site correct; see `docs/AGENTS.md` and `.claude/agents/`. `npm run qa:all` runs every check and prints a report per agent; `npm run qa:crawl -- <url>` crawls a running site.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Brand logos
+Fetched from each operator's own website into `public/brands/` (see `src/data/brand-logos.ts`). Replace with the affiliate programme's brand-kit logos once approved.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Local development note (macOS)
+Do not keep this folder inside iCloud-synced Desktop/Documents with "Optimize Mac Storage": evicted `node_modules` files make `tsc`/`next` hang. Work from a non-synced folder (e.g. `~/dev/`).
