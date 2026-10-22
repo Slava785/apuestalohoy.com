@@ -1,9 +1,9 @@
 /** English (UK). Plain wording, British spelling. `Dict` is the shape es.ts must match. */
 export const en = {
   htmlLang: "en-GB",
-  siteTitle: "Betting sites in Spanish-speaking countries, compared and checked",
+  siteTitle: "Betting sites in Spanish-speaking countries, compared",
   siteDescription:
-    "Compare bookmakers that appear on the official licence register in each country, with reviews and plain guides for Spanish-speaking punters.",
+    "Compare betting sites for Spanish-speaking countries. Brands checked against official licence registers are marked as verified; the rest are listed as not verified. Reviews and plain guides.",
   skip: "Skip to content",
   homeLabel: "Home",
 
@@ -120,6 +120,7 @@ export const en = {
     markets: "Markets",
     company: "Company",
     allCountries: "All countries",
+    sister: "Sister site",
     fine:
       "ApuestaLoHoy may earn an affiliate commission when you visit and sign up with a bookmaker through our links, at no extra cost to you. This does not affect our editorial ratings. Our lists come from each regulator's official register.",
     rights: "© 2026 ApuestaLoHoy. All rights reserved.",
@@ -237,9 +238,9 @@ export const en = {
     allLaws: "See the legal position in every market →",
     metaTitle2: (country: string) => `Betting in ${country}: legal position`,
     metaDescription2: (country: string) => `Where online betting stands in ${country} and why we don't list bookmakers there yet.`,
-    homeMetaTitle: (country: string) => `Betting sites in ${country}, compared and checked`,
+    homeMetaTitle: (country: string) => `Betting sites in ${country}, compared`,
     homeMetaDescription: (country: string) =>
-      `Compare bookmakers in ${country}: reviews, licence details checked against official sources, and guides.`,
+      `Compare betting sites in ${country}: reviews, guides, and a clear mark showing which brands we have checked against official sources and which we haven't.`,
   },
 
   listed: {

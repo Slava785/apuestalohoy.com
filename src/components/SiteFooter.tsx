@@ -30,6 +30,10 @@ export function SiteFooter({ lang }: { lang: Lang }) {
       </div>
       <div className="wrap footer__fine">
         <p>{d.footer.fine}</p>
+        <p className="footer__sister">
+          {d.footer.sister}:{" "}
+          <a href="https://apostarhoje.net/" target="_blank" rel="noopener">ApostarHoje.net</a>
+        </p>
         <p>{d.footer.rights}</p>
       </div>
     </footer>

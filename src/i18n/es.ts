@@ -3,9 +3,9 @@ import type { Dict } from "@/i18n/en";
 /** Español. Neutro y claro; tuteo. */
 export const es: Dict = {
   htmlLang: "es",
-  siteTitle: "Casas de apuestas en países de habla hispana, comparadas y comprobadas",
+  siteTitle: "Casas de apuestas en países de habla hispana, comparadas",
   siteDescription:
-    "Compara las casas de apuestas que figuran en el registro oficial de licencias de cada país, con reseñas y guías claras para apostadores de habla hispana.",
+    "Compara casas de apuestas de países de habla hispana. Las marcas comprobadas en los registros oficiales de licencias van marcadas como verificadas; el resto aparece como sin verificar. Reseñas y guías claras.",
   skip: "Saltar al contenido",
   homeLabel: "Inicio",
 
@@ -122,6 +122,7 @@ export const es: Dict = {
     markets: "Mercados",
     company: "Empresa",
     allCountries: "Todos los países",
+    sister: "Sitio hermano",
     fine:
       "ApuestaLoHoy puede recibir una comisión de afiliado cuando visitas una casa de apuestas y te registras a través de nuestros enlaces, sin coste adicional para ti. Esto no afecta a nuestras valoraciones. Nuestras listas salen del registro oficial de cada regulador.",
     rights: "© 2026 ApuestaLoHoy. Todos los derechos reservados.",
@@ -239,9 +240,9 @@ export const es: Dict = {
     allLaws: "Ver la situación legal de todos los mercados →",
     metaTitle2: (country: string) => `Apuestas en ${country}: situación legal`,
     metaDescription2: (country: string) => `Cómo están las apuestas en línea en ${country} y por qué todavía no listamos casas de apuestas allí.`,
-    homeMetaTitle: (country: string) => `Casas de apuestas en ${country}, comparadas y comprobadas`,
+    homeMetaTitle: (country: string) => `Casas de apuestas en ${country}, comparadas`,
     homeMetaDescription: (country: string) =>
-      `Compara casas de apuestas en ${country}: reseñas, datos de licencia comprobados en fuentes oficiales y guías.`,
+      `Compara casas de apuestas en ${country}: reseñas, guías y una marca clara que indica qué casas hemos comprobado en fuentes oficiales y cuáles no.`,
   },
 
   listed: {
