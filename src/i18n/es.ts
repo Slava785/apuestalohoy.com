@@ -122,7 +122,7 @@ export const es: Dict = {
     markets: "Mercados",
     company: "Empresa",
     allCountries: "Todos los países",
-    sister: "Sitio hermano",
+    sister: "Empresa hermana",
     fine:
       "ApuestaLoHoy puede recibir una comisión de afiliado cuando visitas una casa de apuestas y te registras a través de nuestros enlaces, sin coste adicional para ti. Esto no afecta a nuestras valoraciones. Nuestras listas salen del registro oficial de cada regulador.",
     rights: "© 2026 ApuestaLoHoy. Todos los derechos reservados.",

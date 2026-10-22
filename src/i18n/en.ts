@@ -120,7 +120,7 @@ export const en = {
     markets: "Markets",
     company: "Company",
     allCountries: "All countries",
-    sister: "Sister site",
+    sister: "Sister company",
     fine:
       "ApuestaLoHoy may earn an affiliate commission when you visit and sign up with a bookmaker through our links, at no extra cost to you. This does not affect our editorial ratings. Our lists come from each regulator's official register.",
     rights: "© 2026 ApuestaLoHoy. All rights reserved.",
